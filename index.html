@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+      background: url(images/pattern-background-desktop.svg);
+      background-color: hsl(225, 100%, 94%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;  
+      font-family: "Red Hat Display", sans-serif; 
+      font-size: 16px;     
+    }
+
+    button{
+      font-family: inherit;
+      border: none;
+      padding: 10px 10px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .maincontainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 450px;
+      min-height: 80vh;
+    }
+
+    .text-container{
+      padding: 20px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 5px 0 0 hsl(224, 23%, 55%, 0.1)
+    }
+
+    .imagestyle{
+      border-radius: 15px 15px 0 0;
+      width: 100%;
+    }
+
+    h1 {
+      font-weight: bold;
+      padding-top: 5px;
+      padding-bottom: 20px;
+    }
+
+    h2{
+      font-size: 16px;
+    }
+
+    p{
+      text-align: center;
+      line-height: 1.5;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .change-button {
+      background-color: transparent;
+      color: hsl(245, 75%, 52%);
+      text-decoration: underline;
+    }
+
+    .container-with-pricing{
+      display: flex;
+      background-color: hsl(225, 100%, 98%);
+      width: 90%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      margin: 20px;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    .buttons > :first-child{
+      background-color: hsl(245, 75%, 52%);
+      color: hsl(225, 100%, 98%);
+      margin-bottom: 10px;
+      box-shadow: 0 5px 0 0 hsl(224, 23%, 55%, 0.1)
+    }
+
+    .buttons > :last-child{
+      background-color: transparent;
+      color: hsl(224, 23%, 55%);;
+    }
+
+    .buttons > :first-child:hover, .change-button:hover{
+      opacity: 0.8;
+    }
+
+    .buttons > :last-child:hover{
+      background-color: transparent;
+      color: hsl(223, 47%, 23%);
+    }
+
+    .buttons{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .annual-plan{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .annual-plan img{
+      margin-right: 10px;
+    }
+
+    @media (max-width: 600px)
+    {
+      body{
+        background: url(images/pattern-background-mobile.svg);
+        background-color: hsl(225, 100%, 94%);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class = "maincontainer">
+    <img src="images/illustration-hero.svg" alt="Person happily dancing to the music" class = "imagestyle" />
+    <div class = "text-container">
+    <h1>Order Summary</h1>
+    <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+    device anywhere you like!</p>
+
+    <div class = "container-with-pricing">
+      <div class = "annual-plan">
+      <img src = "images/icon-music.svg" alt = "icon with a music note" />
+      <div class = "text-annual-plan"><h2>Annual Plan</h2><p>$59.99/year</p>
+      </div></div>
+    <button class = "change-button">Change</button>
+    </div>
+    <div class = "buttons">
+      <button>Proceed to Payment</button>
+      <button>Cancel Order</button>
+    </div>
+  </div>
+
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ds24p</a>.
+  </div>
+</body>
+</html>
